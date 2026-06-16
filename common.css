@@ -1,0 +1,130 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(9px);
+    background: rgba(245, 249, 255, 0.86);
+    border-bottom: 1px solid #c6d8ec;
+}
+
+.site-shell {
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+}
+
+.site-nav {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.35rem 0;
+}
+
+.site-brand {
+    text-decoration: none;
+    font-family: "Orbitron", "Segoe UI", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #102238;
+}
+
+.site-brand span {
+    color: #005fcc;
+}
+
+.site-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.site-links a {
+    text-decoration: none;
+    color: #264865;
+    border: 1px solid #c6d8ec;
+    background: #f7fbff;
+    border-radius: 999px;
+    padding: 0.42rem 0.78rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: transform 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.site-links a:hover {
+    transform: translateY(-1px);
+    border-color: #005fcc;
+    color: #005fcc;
+}
+
+.site-links a.active {
+    background: linear-gradient(95deg, #005fcc, #1c7ce8);
+    color: #ffffff;
+    border-color: #005fcc;
+}
+
+.site-footer {
+    margin-top: 1.6rem;
+    border-top: 1px solid #c6d8ec;
+    background: rgba(244, 248, 255, 0.72);
+    padding: 0;
+    text-align: left;
+}
+
+.site-footer-inner {
+    padding: 1rem 0 1.3rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #36506a;
+    font-size: 0.92rem;
+}
+
+.site-footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.site-footer-buttons a {
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: 700;
+    border-radius: 999px;
+    border: 1px solid #c6d8ec;
+    background: #ffffff;
+    color: #1e3f5c;
+    padding: 0.36rem 0.72rem;
+}
+
+.site-footer-buttons a:hover {
+    border-color: #005fcc;
+    color: #005fcc;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        position: static;
+    }
+
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.7rem 0;
+    }
+
+    .site-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,120 @@
+:root {
+    --bg: #f4f8ff;
+    --surface: #ffffff;
+    --surface-soft: #edf5ff;
+    --ink: #102238;
+    --ink-soft: #36506a;
+    --primary: #005fcc;
+    --accent: #00a896;
+    --line: #c6d8ec;
+    --shadow: 0 14px 34px rgba(16, 34, 56, 0.12);
+    --radius-lg: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    background:
+        radial-gradient(45rem 30rem at -10% -10%, rgba(0, 95, 204, 0.15), transparent 64%),
+        radial-gradient(48rem 31rem at 110% 0%, rgba(0, 168, 150, 0.16), transparent 60%),
+        var(--bg);
+}
+
+.wrap {
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+    padding: 2rem 0 2.4rem;
+}
+
+.hero {
+    background: linear-gradient(140deg, #ffffff, #ecf4ff);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.7rem, 3.8vw, 2.5rem);
+}
+
+.hero p {
+    margin: 0;
+    color: var(--ink-soft);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: 0 10px 26px rgba(16, 34, 56, 0.08);
+    padding: 1rem;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin-top: 0;
+    color: var(--ink-soft);
+    line-height: 1.56;
+}
+
+.stack {
+    margin-top: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.actions a {
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: #1f425f;
+    background: var(--surface-soft);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.42rem 0.76rem;
+}
+
+.actions a:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+@media (max-width: 960px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 660px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
